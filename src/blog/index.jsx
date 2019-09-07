@@ -36,6 +36,7 @@ export default class index extends Component {
         break;
       case "ReactSenior":
         Dom = <ReactSenior />;
+        break;
     }
     return <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>;
   }

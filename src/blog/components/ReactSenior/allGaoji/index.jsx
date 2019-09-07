@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 // react高级
 import { Card } from "antd";
+// 引入 card插件
 import TopApi from "./top-Api";
 import Jsx from "./Jsx";
 import Gaojie from "./Gaojie";
 import Life from "./Life";
 import State from "./State";
 import Chacao from "./Chacao";
+// 引入每一个标题导航的跳转模块
 import { message } from "antd";
+// 引入antd的提示
 import "./index.scss";
 
 const Gaoji = [
@@ -42,28 +45,36 @@ const Gaoji = [
     route: "ReactSenior/chacao"
   }
 ];
+// 设置每一项的子路由
+
 export default class ReactSenior extends Component {
   constructor() {
     super();
     this.state = {
       isCom: window.location.hash.slice(1)
+      // 设置一个拿到的浏览器hash后缀并赋值
     };
 
     window.onhashchange = () => {
+      // 拿到并监听浏览器的hash
       this.setState({
+        // 监听值发生改变就更改state赋的值
         isCom: window.location.hash.slice(1)
       });
     };
   }
   getSonData = idx => {
+    // 设置每一项的浏览器hash
     window.location.hash = Gaoji[idx].route;
   };
   componentDidMount() {
+    // 加载完弹antd弹窗
     message.success("欢迎来到思博的部分~🤣🤣", 10);
   }
   render() {
-    console.log(this.state.isCom);
+    // console.log(this.state.isCom);
     let Dom = "";
+    // 声明个空值用来赋组件
     switch (this.state.isCom) {
       case "ReactSenior/Top-Api":
         Dom = <TopApi />;
@@ -84,12 +95,15 @@ export default class ReactSenior extends Component {
         Dom = <Chacao />;
         break;
     }
+    // 根据条件循环，不同的子路由将Dom渲染为当前条件组件
     return (
       <div className="gaoji-bigbox-bs-004">
+        {/* 给个判断，如果是ReactSenior就显示父级模块（六个导航模块） */}
         {this.state.isCom == "ReactSenior" ? (
           Gaoji.map((item, index) => {
             return (
               <Card
+                // 父级模块  六个导航模块
                 key={index}
                 title={item.title}
                 onClick={() => {
@@ -102,6 +116,7 @@ export default class ReactSenior extends Component {
             );
           })
         ) : (
+          // 否则根据当前switch循环条件渲染dom
           <>{Dom}</>
         )}
       </div>

@@ -1,11 +1,14 @@
 import React from "react";
 import topapi from "./top-api.json";
+// 引入topapi的json文件
 import { Divider } from "antd";
+// 引入分割线
 export default props => {
-  console.log(topapi);
+  // console.log(topapi);
   return (
     <div style={{ width: "100%" }}>
       {topapi.map((item, index) => {
+        // 循环每一项标题
         return (
           <React.Fragment key={index}>
             <mark key="1">{item.title}</mark>
@@ -17,6 +20,7 @@ export default props => {
               }}
               key="2"
             >
+              {/* 循环内容 */}
               {item.cont}
             </main>
             <Divider />
