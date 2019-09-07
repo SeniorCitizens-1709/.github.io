@@ -52,7 +52,8 @@ export default class Mylayout extends React.Component {
           <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
             <div className="logo" />
             <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-              {leftNav.map((item, index) => {
+              {
+                leftNav.map((item, index) => {
                 return (
                   <Menu.Item
                     key={index}
@@ -64,7 +65,8 @@ export default class Mylayout extends React.Component {
                     <span>{item.text}</span>
                   </Menu.Item>
                 );
-              })}
+              })
+              }
             </Menu>
           </Sider>
           <Layout>
