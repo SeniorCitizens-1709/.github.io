@@ -22,7 +22,8 @@ const leftNav = [
   },
   {
     iconType: "upload",
-    text: "第三方辅助应用"
+    text: "第三方辅助应用",
+    id:"third-plugins"
   }
 ];
 

@@ -6,7 +6,7 @@ import "antd/dist/antd.css";
 // react组件分类
 import ComponentType from "./components/componentType";
 import ReactSenior from "./components/ReactSenior/allGaoji";
-
+import Third from './components/ThirdPlugins'
 export default class index extends Component {
   constructor() {
     super();
@@ -36,6 +36,9 @@ export default class index extends Component {
         break;
       case "ReactSenior":
         Dom = <ReactSenior />;
+        break;
+        case "third-plugins":
+        Dom = <Third />;
         break;
     }
     return <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>;
