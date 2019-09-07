@@ -12,7 +12,7 @@ const leftNav = [
   },
   {
     iconType: "video-camera",
-    text: "React初级(组件类型)",
+    text: "React初级",
     id: "ComponentType"
   },
   {
@@ -21,8 +21,8 @@ const leftNav = [
     id: "ReactSenior"
   },
   {
-    iconType: "upload",
-    text: "第三方辅助应用",
+    iconType: "pie-chart",
+    text: "React插件",
     id:"third-plugins"
   }
 ];

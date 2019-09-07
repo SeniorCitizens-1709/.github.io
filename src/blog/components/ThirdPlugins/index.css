@@ -1,0 +1,15 @@
+.title{
+    /* font-family: '黑体'; */
+    font-size: 26px;
+    color: black;
+    font-weight: bold;
+}
+.Typeface{
+    font-size: 14px;
+    font-family: '黑体';
+    font-weight: bold;
+    /* color: black; */
+}
+.Distance{
+    padding: 0 40px 0 40px;
+}

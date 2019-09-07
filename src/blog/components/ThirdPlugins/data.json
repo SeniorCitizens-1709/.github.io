@@ -1,0 +1,48 @@
+{
+    "ThirdPlugins":[
+        {
+            "title":"Ant Design of React",
+            "contentone":"antd 是基于 Ant Design 设计体系的 React UI 组件库，主要用于研发企业级中后台产品。"
+        },
+        {
+            "title":"特性 Characteristic",
+            "contentone":"提炼自企业级中后台产品的交互语言和视觉风格。",
+            "contenttwo":"开箱即用的高质量 React 组件。",
+            "contentthree":"使用 TypeScript 构建，提供完整的类型定义文件。",
+            "contentfour":"全链路开发和设计工具体系。"
+        },
+        {
+            "title":"环境 Environmental Science",
+            "contentone":"现代浏览器和 IE9 及以上（需要 polyfills）。",
+            "contenttwo":"支持服务端渲染。",
+            "contentthree":"Electron"
+        }, 
+        {
+            "title":"版本 Edition",
+            "contentone":"稳定版：npm package",
+            "contenttwo":"你可以订阅：https://github.com/ant-design/ant-design/releases.atom 来获得稳定版发布的通知。",
+            "contentthree":"使用 TypeScript 构建，提供完整的类型定义文件。",
+            "contentfour":"全链路开发和设计工具体系。"
+        }, 
+        {
+            "title":"安装 Install",
+            "contentone":"使用 npm 或 yarn 安装",
+            "contenttwo":"我们推荐使用 npm 或 yarn 的方式进行开发，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。",
+            "contentthree":"npm install antd --save",
+            "contentfour":"yarn add antd。",
+            "contentfive":"如果你的网络环境不佳，推荐使用 cnpm。"
+        },
+        {
+            "title":"使用 Use",
+            "contentone":"直接在根目录下的index.js引入",
+            "contenttwo":"import { ConfigProvider, DatePicker, message } from 'antd';",
+            "contentthree":"import 'antd/dist/antd.css';"
+        },
+        {
+            "title":"实战 Actualcombat",
+            "contentone":"在真实项目开发中，你可能会需要 Redux 或者 MobX 这样的数据流方案，Ant Design React 作为一个 UI 库，可以和任何 React 生态圈内的数据流方案以及应用框架搭配使用。我们基于 Redux 推出了自己的最佳实践 dva，以及可插拔的企业级应用框架 umi，推荐你在项目中使用。",
+            "contenttwo":"dva 是一个基于 Redux 的 轻量级数据流方案，概念来自 elm，支持 side effects、热替换、动态加载、react-native、SSR 等，已在生产环境广泛应用。",
+            "contentthree":"umi 则是一个可插拔的企业级 react 应用框架。umi 以路由为基础的，支持类 next.js 的约定式路由，以及各种进阶的路由功能，并以此进行功能扩展，比如支持路由级的按需加载。然后配以完善的插件体系，覆盖从源码到构建产物的每个生命周期，支持各种功能扩展和业务需求。"
+        }
+    ]
+}
