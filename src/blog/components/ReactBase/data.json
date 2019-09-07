@@ -2,48 +2,73 @@
 	"ReactBase":[
 		{
 			"title":"react发展起源",
-			"content":"2013年6月，Facebook公司正式发布"
+			"content":"Facebook认为MVC无法满足他们的扩展需求，由于他们非常巨大的代码库和庞大的组织，使得MVC很快变得复杂，每当需要添加一项新功能或者特性时，系统的复杂就成级数的增长，致使代码变得脆弱而不可预测，结果导致他们的MVC正在土崩瓦解。认为MVC不适合大规模的应用。当系统中有很多模型和相应的视图时，其复杂度就会迅速扩大，非常难以理解和调试，特别是模型和视图可能存在双向数据流动。解决这个问题需要“以某种方式组织代码，使其更加可预测”，这通过Flux和React已经完成.Flux是一个系统架构，用于推进应用中的数据单向流动。",
+			"content1":"React是一个JavaScript框架，用于构建“可预期的”和声明式的”Web用户界面”，它已经使Facebook更快地开发Web应用。"
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"title":"react历史时间轴",
+			"xx":"2010 - react最初迹象",
+			"content":"FB引入xhp到php代码中, 同年开源。",
+			"content1":"Xhp允许创建复合组件，后期引入至react中。"
+
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"xx":"2011 - 早期原型",
+			"content":"Jordan Walke 创建 FaxJs, react的早期原型, 支撑了FB的一套搜索组件。"
+
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"xx":"2012 - fb新变化",
+			"content":"FB AD 管理难度加深。 FB需要找到更好解决方案。 Jordan Walke 基于原型创建了react",
+			"content1":"4月9日，FB收购Instagram。Instagram想使用FB的新技术。基于此，FB受压之下考虑解耦并开源React",
+			"content2":"这些大部分由Pete Hunt完成。",
+			"content3":"9月8日至12日：TechCrunch Disrupt 旧金山峰会上，马克 扎克伯格表示：我们最大的错误就是压太多宝在HTML5上了。",
+			"content4":"他承诺FB将会很多提供更好的移动体验。"
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"xx":"2013 - 发布之年",
+			"content":"有趣的是: 观众表示质疑。参会的早期框架使用者中大部分人认为React是很大的退步。但React定位于创新者",
+			"content1":"React的创建者及时意识到错误，决定后续开启React宣传之旅，让他们由质疑转为支持",
+			"content2":"6月2日：React 接入 JSFiddle",
+			"content3":"7月30日：React和jsx 接入 Ruby On Rails框架",
+			"content4":"12月17日：David Nolen 介绍 基于React的 OM框架，介绍中解释了React的高级特性，获得一批早期的支持者。文中解释React如何优于其他方案，进一步提高React的认知度。"
+
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"xx":"2014 - 扩张之年",
+			"content":"React逐渐获得了声誉，开始走向潜在用户中的早期使用者。这时候，FB团队需要传达React如何稳定的消息，而不是简单依赖其技术优势。基于这点关注，他们开始转向吸引企业用户，像: Netflix。",
+			"content1":"1月2日：React Developer Tool 成为谷歌开发者工具的插件。",
+			"content2":"4月7日至9日：React London 2014 大会召开",
+			"content3":"12月12日：PlanOut， 一项用于在线实验的语言发布。",
+			"content4":"发布的0.5版本中包含一个基于React实现的Planout语言编辑器，引入FB内部使用的完整特性的编译器。"
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"xx":"2015 - 走向稳定",
+			"content":"2015年早期: Airbnb开始使用React",
+			"content1":"3月25日：FB宣布 RN IOS 开源并提交Github.",
+			"content2":"6月2日：Dan Abramov 和 Andrew Clark 发布了 Redux",
+			"content3":"9月2日： React Developer Tools 第一个稳定版本发布。",
+			"content4":"9月14日：RN Android 发布"
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"xx":"2016 - 引领主流",
+			"content":"3月：Mobx 发布",
+			"content1":"2月22日至23日：Reactjs 2016大会在旧金山举办，Isaac Salier-Hellendag 介绍 Draft.js",
+			"content2":"6月2日至3日：React欧洲大会举办",
+			"content3":"7月11日：React的 错误代码系统 发布",
+			"content4":"11月： React UI工具集 Blueprint"
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"xx":"2017 - 改进之年",
+			"content":"4月19日：F8 2017 大会 React Fiber 开源",
+			"content1":"9月：React, Jest, Flow, and Immutable.js 更换授权许可",
+			"content2":"10月：Netflix 移除 客户端Reactjs",
+			"content3":"11月28日：React v16.2发布，提供Fragment优化改进"
 		},
 		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
-		},
-		{
-			"title":"react现状",
-			"content":"GitHub仓库贡献人数5678人"
+			"xx":"2018",
+			"content":"3月1日-2日：ReactCONF 冰岛大会，Dan Abramov 发表 超越React 16 演讲",
+			"content1":"3月29日: React 16.3.0 发布"
 		}
-		
 	]
 }
