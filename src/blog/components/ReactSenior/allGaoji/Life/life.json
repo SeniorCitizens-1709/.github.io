@@ -1,0 +1,46 @@
+[
+  {
+    "life": "getDefaultProps:",
+    "cont": "设置默认的props"
+  },
+  {
+    "life": " getInitialState :",
+    "cont": "设置默认的state"
+  },
+  {
+    "life": "设置默认的state:",
+    "cont": "组件第一次即将调用render"
+  },
+  {
+    "life": " render :",
+    "cont": "渲染DOM"
+  },
+  {
+    "life": "componentDidMount:",
+    "cont": "render完成，在这里可以获取到真实的dom"
+  },
+  {
+    "life": "componentWillReceiveProps:",
+    "cont": "当组件接收到新得props"
+  },
+  {
+    "life": "shouldComponentUpdate:",
+    "cont": "判断是否需要重新渲染"
+  },
+  {
+    "life": " componentWillUpdate:",
+    "cont": "(组件重新渲染)即将调用render"
+  },
+  {
+    "life": "componentDidUpdate:",
+    "cont": "(组件重新渲染完成)"
+  },
+  {
+    "life": "omponentWillUnmount:",
+    "cont": "(组件卸载前)"
+  },
+  {
+    "life": "  unmountComponentAtNode:",
+    "cont": "(组件卸载后)"
+  }
+]

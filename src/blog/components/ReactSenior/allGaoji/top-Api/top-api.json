@@ -1,0 +1,26 @@
+[
+  {
+    "title": "定义：",
+    "cont": "凡是挂载在全局对象React下面的方法或属性都叫顶级Api"
+  },
+  {
+    "title": "1.React.createElement：",
+    "cont": "创建虚拟Dom,接受三个参数:('html原生标签','属性','内容或子组件');"
+  },
+  {
+    "title": "2.React.Children:",
+    "cont": "提供了用于处理this.props.children不透明数据结构的实用方法,详见:https://zh-hans.reactjs.org/docs/react-api.html#reactchildren默认 一般我们使用map方法,接受两个参数，（props.children,callback(child,index))    另类还有toArray(children)：将children这个复杂的数据结构以数组的方式扁平展开并返回，并为每个子节点分配一个key.   only(children)：验证children是否只有一个子节点（一个react元素），如果有则返回它，否则此方法会抛出错误。count(children)：返回children中的组件总数量，也就是子元素的个数forEach(children，function[(thisArg)]):与React.Children.map()类似，但它不会返回一个数组."
+  },
+  {
+    "title": "3.React.cloneElement",
+    "cont": "以element元素为样板克隆并返回新的React元素。返回元素的props是将新的props与演示元素的props浅层合并后的结果。新的子元素将取代现有的子元素，而来自原始元素的key和ref将被保留.针对与浅层合并，我们在处理新增属性的时候，要在子元素属性上用{...props}深合并语法：React.cloneElement('element',{...props},text|children)"
+  },
+  {
+    "title": "4.React.Fragment:",
+    "cont": "React中的一个常见模式是一个组件返回多个元素。Fragments允许你将字列表分组，而无需向DOM添加额外节点。它相当于包裹容器，但是并不会产生真实的DOM元素，接受唯一的参数：key"
+  },
+  {
+    "title": "非DOM属性介绍 - 为什么有非DOM属性",
+    "cont": "非DOM属性:dangeroustySetLinnerHtml、ref、keydangeroustySetLinnerHtml:在JSX中直接插入HTML代码"
+  }
+]

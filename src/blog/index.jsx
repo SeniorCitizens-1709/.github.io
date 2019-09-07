@@ -5,7 +5,7 @@ import ReactBase from "./components/ReactBase";
 import "antd/dist/antd.css";
 // react组件分类
 import ComponentType from "./components/componentType";
-import ReactSenior from "./components/ReactSenior";
+import ReactSenior from "./components/ReactSenior/allGaoji";
 
 export default class index extends Component {
   constructor() {
