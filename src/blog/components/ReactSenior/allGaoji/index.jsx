@@ -7,6 +7,7 @@ import Gaojie from "./Gaojie";
 import Life from "./Life";
 import State from "./State";
 import Chacao from "./Chacao";
+import { message } from "antd";
 import "./index.scss";
 
 const Gaoji = [
@@ -57,6 +58,9 @@ export default class ReactSenior extends Component {
   getSonData = idx => {
     window.location.hash = Gaoji[idx].route;
   };
+  componentDidMount() {
+    message.success("欢迎来到思博的部分~🤣🤣", 10);
+  }
   render() {
     console.log(this.state.isCom);
     let Dom = "";
