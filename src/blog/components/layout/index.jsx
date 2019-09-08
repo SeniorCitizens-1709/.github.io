@@ -23,7 +23,7 @@ const leftNav = [
   {
     iconType: "pie-chart",
     text: "React插件",
-    id:"third-plugins"
+    id: "third-plugins"
   }
 ];
 
@@ -48,13 +48,12 @@ export default class Mylayout extends React.Component {
     // Menu：做折叠导航的
     // Content：内容展示组件
     return (
-      <div>
-        <Layout className="leftNav overallsituation-l-0">
-          <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-            <div className="logo" />
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-              {
-                leftNav.map((item, index) => {
+      <Layout className="leftNav overallsituation-l-0">
+        <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
+          <div className="logo" />
+          <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+            {
+              leftNav.map((item, index) => {
                 return (
                   <Menu.Item
                     key={index}
@@ -67,31 +66,30 @@ export default class Mylayout extends React.Component {
                   </Menu.Item>
                 );
               })
-              }
-            </Menu>
-          </Sider>
-          <Layout>
-            <Header style={{ background: "#fff", padding: 0 }}>
-              <Icon
-                className="trigger"
-                type={this.state.collapsed ? "menu-unfold" : "menu-fold"}
-                onClick={this.toggle}
-              />
-            </Header>
-            <Content
-              style={{
-                margin: "24px 16px",
-                padding: 24,
-                background: "#fff"
-              }}
-              className="content-gao"
-            >
-              {/* 隐式渲染进来的组件 */}
-              {this.props.children}
-            </Content>
-          </Layout>
+            }
+          </Menu>
+        </Sider>
+        <Layout>
+          <Header style={{ background: "#fff", padding: 0 }}>
+            <Icon
+              className="trigger"
+              type={this.state.collapsed ? "menu-unfold" : "menu-fold"}
+              onClick={this.toggle}
+            />
+          </Header>
+          <Content
+            style={{
+              margin: "24px 16px",
+              padding: 24,
+              background: "#fff"
+            }}
+            className="content-gao"
+          >
+            {/* 隐式渲染进来的组件 */}
+            {this.props.children}
+          </Content>
         </Layout>
-      </div>
+      </Layout>
     );
   }
 }

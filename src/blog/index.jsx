@@ -37,7 +37,7 @@ export default class index extends Component {
       case "ReactSenior":
         Dom = <ReactSenior />;
         break;
-        case "third-plugins":
+      case "third-plugins":
         Dom = <Third />;
         break;
     }

@@ -7,18 +7,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.overallsituation-l-0{
+.overallsituation-l-0 {
   width: 100%;
-  height: 657px;
+  height: 100%;
 }
-.content-gao{
-  /* height: 100%; */
-}
+
 .leftNav .ant-layout-content {
   min-height: auto;
 }

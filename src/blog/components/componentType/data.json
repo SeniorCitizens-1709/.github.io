@@ -1,0 +1,171 @@
+{
+    "data": [
+        {
+            "title": "传统Dom事件操作对比组件（模块）化开发",
+            "arrData": [
+                {
+                    "title": "传统Dom事件操作",
+                    "itemData": [
+                        "优点：直观、书写习惯、渲染快、有利于seo",
+                        "缺点：可复用性差、扩展困难、维护成本高、耦合度高",
+                        "适用于：传统的静态网站、宣传页。参与开发人员少"
+                    ]
+                },
+                {
+                    "title": "组件（模块）化开发",
+                    "itemData": [
+                        "优点： 复用性强、 高内聚低耦合、 命名空间便于扩展和优化、 维护方便， 易于阅读 ",
+                        " 缺点： 初期开发速度慢。 对开发人员的逻辑能力要求高， 需要借助自动化工具加工（ nodejs、 webpack、 babel）， 不利于SEO",
+                        "适用于： 团队开发， 应用和程序项目， 中大型项目 "
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "react特点及核心",
+            "arrData": [
+                {
+                    "title": "核心",
+                    "itemData": [
+                        {
+                            "text": "核心",
+                            "cards": [
+                                "react 的核心是组件，组件的设计目的是提高代码复用率、降低测试难度和代码复杂度"
+                            ]
+                        },
+                        {
+                            "text": "解析",
+                            "cards": [
+                                "提高代码复用率：组件将数据和逻辑封装，类似面向对象中的类",
+                                "降低测试难度：组件高内聚低耦合，很容易对单个组件进行测试",
+                                "代码复杂度：直观的语法可以极大提高可读性"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "特点",
+                    "itemData": [
+                        "声明设计------React采用声明范式，可以轻松描素应用<",
+                        "高效------------React通过对Dom的模拟，最大限度的减少与Dom的交互",
+                        "灵活------------React可以与已知的库或框架很好的配合",
+                        "JSX----------JSX是javascript语法的扩展，React开发不一定使用JSX，但我们建议使用它",
+                        "组件---------通过React构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中",
+                        "单项响应的数据流---------React实现了单项响应式的数据流，从而减少了重复代码这也是它为什么比传统数据绑定"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "react的优缺点",
+            "arrData": [
+                {
+                    "title": "优点",
+                    "itemData": [
+                        "jsx语法创建虚拟DOM，极速的渲染性能",
+                        "组件化开发，组件独立，方便重复使用",
+                        "单向数据流",
+                        "组件生命周期",
+                        "跨浏览器兼容性好"
+                    ]
+                },
+                {
+                    "title": "缺点",
+                    "itemData": [
+                        {
+                            "text": "不适合单独做一个完整的框架",
+                            "cards": [
+                                "React是目标是UI组件，通常可以和其它框架组合使用，目前并不适合单独做一个完整的框架。React 即使配上 Flux 的组合，也不能称之一个完整的框架，比如你想用Promise化的AJAX？对不起没有，自己找现成的库去。而且第三方组件远远不如Angular多。"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "react脚手架安装及命令解析",
+            "arrData": [
+                {
+                    "title": "安装命令",
+                    "itemData": [
+                        {
+                            "text": "第一种方法",
+                            "cards": [
+                                "全局安装：npm install -g create-react-app",
+                                "初始化项目：create-react-app my-app",
+                                "进入项目：cd my-app",
+                                "运行项目：npm start"
+                            ]
+                        },
+                        {
+                            "text": "第二种方法",
+                            "cards": [
+                                "npx create-react-app my-app",
+                                "进入项目：cd my-app",
+                                "运行项目：npm start"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "命令解析",
+                    "itemData": [
+                        {
+                            "text": "npm run start",
+                            "cards": [
+                                "运行本地开发环境"
+                            ]
+                        },
+                        {
+                            "text": "npm run build",
+                            "cards": [
+                                "运行打包线上环境"
+                            ]
+                        },
+                        {
+                            "text": "npm run test",
+                            "cards": [
+                                "运行测试环境"
+                            ]
+                        },
+                        {
+                            "text": "npm run eject",
+                            "cards": [
+                                "重新生成以来和配置文件",
+                                "注：只能执行一次"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "react组件中的constructor和super",
+            "arrData": [
+                {
+                    "title": "constructor",
+                    "itemData": [
+                        "定义：在React中constructor表示父类的构造方法，用来新建父类的this对象，这是ES6对类的默认方法；也是class组件生命周期的初始化函数"
+                    ]
+                },
+                {
+                    "title": "super",
+                    "itemData": [
+                        "作用：因为在class组件中，继承使用 extends 关键字来实现。所以子类没有自己的this对象，而是继承父类的this对象，只有调用super()方法；子类才得到this对象",
+                        "使用：super()在constructor中必须是函数调用，并且一定是在构造函数的最顶层使用",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "react一些格式写法",
+            "isMap": "true",
+            "arrData": [
+                "1、在react中所有的dom元素都是js生成的虚拟dom，在js中class是保留关键字，所以使用class类名的时候，需要遵守react定义的className",
+                "2、编写行内样式时，需要使用{{ }}，例如：style:{{width:'200px'}}",
+                "3、在dom元素内写注释或者运行js的时候需要使用 {} 进行包裹， 它不是单纯意义的对象，它表示js表达式，及js执行环境"
+            ]
+        }
+    ]
+}
