@@ -116,9 +116,9 @@ export default class ReactSenior extends Component {
             );
           })
         ) : (
-          // 否则根据当前switch循环条件渲染dom
-          <>{Dom}</>
-        )}
+            // 否则根据当前switch循环条件渲染dom
+            <>{Dom}</>
+          )}
       </div>
     );
   }

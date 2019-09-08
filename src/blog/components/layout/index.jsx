@@ -8,22 +8,26 @@ const leftNav = [
   {
     iconType: "solution",
     text: "React概述",
-    id: "ReactBase"
+    id: "ReactBase",
+    key: "0"
   },
   {
     iconType: "video-camera",
     text: "React初级",
-    id: "ComponentType"
+    id: "ComponentType",
+    key: "1"
   },
   {
     iconType: "upload",
     text: "React高级",
-    id: "ReactSenior"
+    id: "ReactSenior",
+    key: "2"
   },
   {
     iconType: "pie-chart",
     text: "React插件",
-    id: "third-plugins"
+    id: "third-plugins",
+    key: "3"
   }
 ];
 
@@ -32,7 +36,8 @@ export default class Mylayout extends React.Component {
     super();
     this.state = {
       // 控制开展收起
-      collapsed: false
+      collapsed: false,
+      isCom: window.location.hash.slice(1)
     };
   }
   // 切换的方法
@@ -47,11 +52,15 @@ export default class Mylayout extends React.Component {
     // Header：头部组件
     // Menu：做折叠导航的
     // Content：内容展示组件
+
+    // 获取当前页面在leftNav数据中的下标
+    let index = leftNav.indexOf(leftNav.find(item => item.id === this.state.isCom));
+
     return (
       <Layout className="leftNav overallsituation-l-0">
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+          <Menu theme="dark" mode="inline" defaultSelectedKeys={[index + '' || '0']}>
             {
               leftNav.map((item, index) => {
                 return (
