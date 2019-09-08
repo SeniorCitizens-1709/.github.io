@@ -7,7 +7,9 @@ export default props => {
   return (
     <div>
       <div style={{ marginBottom: "20px" }}>
-        <a href="http://localhost:3000/#ReactSenior">返回</a>
+        <a href="https://seniorcitizens-1709.github.io/.github.io/build/#ReactSenior">
+          返回
+        </a>
       </div>
       {/* 返回按钮 */}
       {/* 循环拿到的高阶函数的json */}
