@@ -36,8 +36,7 @@ export default class index extends Component {
   // 收听子组件传递数据
   getSonData = id => {
     window.location.hash = id;
-    // 设置hash值
-    console.log(id);
+    // 设置hash值 
   };
   // 渲染函数
   // 带/的是思博配的子路由
