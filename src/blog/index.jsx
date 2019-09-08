@@ -37,7 +37,6 @@ export default class index extends Component {
   getSonData = id => {
     window.location.hash = id;
     // 设置hash值
-    console.log(id);
   };
   // 渲染函数
   // 带/的是思博配的子路由
@@ -53,11 +52,7 @@ export default class index extends Component {
         Dom = <ComponentType />;
         break;
       case "ReactSenior":
-<<<<<<< HEAD
         Dom = <ReactSenior a={this.getSonData} />;
-=======
-        Dom = <ReactSenior ishash={1} />;
->>>>>>> decc17c5c4dfa8e304f63b10f9074d05eeb13c04
         break;
       case "third-plugins":
         Dom = <Third />;
