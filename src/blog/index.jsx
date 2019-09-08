@@ -36,22 +36,25 @@ export default class index extends Component {
   // 收听子组件传递数据
   getSonData = id => {
     window.location.hash = id;
-    // 设置hash值 
-  };
-  // 渲染函数
-  // 带/的是思博配的子路由
-  render() {
-    let Dom = "";
-    // 声明一个dom作为接下来条件渲染的值
+      // 设置hash值
+    };
+    // 渲染函数
+    // 带/的是思博配的子路由
+    render() {
+      let Dom = "";
+      // 声明一个dom作为接下来条件渲染的值
 switch (this.state.isCom) {
-  // 根据hash做条件渲染
+    // 根据hash做条件渲染
   case "ReactBase":
-  Dom= <ReactBase />; 
+  Dom= <ReactBase />;
         break;
       case "ComponentType":
         Dom =  <ComponentType />;
-         break;
+ break;
 case "ReactSenior":
+        Dom = <ReactSenior a={this.getSonData} />;
+        break;
+      case "ReactSenior":
         Dom = <ReactSenior a={this.getSonData} />;
         break;
       case "third-plugins":
