@@ -6,6 +6,10 @@ import { Divider } from "antd";
 export default props => {
   return (
     <div>
+      <div style={{ marginBottom: "20px" }}>
+        <a href="http://localhost:3000/#ReactSenior">返回</a>
+      </div>
+      {/* 返回按钮 */}
       {/* 循环数据 */}
       {jsx.map((item, index) => {
         return (

@@ -7,6 +7,10 @@ export default props => {
   return (
     <div>
       {/* 循环拿到的数据 */}
+      <div style={{ marginBottom: "20px" }}>
+        <a href="http://localhost:3000/#ReactSenior">返回</a>
+      </div>
+      {/* 返回按钮 */}
       {state.map((item, index) => {
         return (
           <React.Fragment key={index}>

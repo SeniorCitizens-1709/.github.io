@@ -5,6 +5,11 @@ import { Divider } from "antd";
 export default props => {
   return (
     <div>
+      <div style={{ marginBottom: "20px" }}>
+        <a href="http://localhost:3000/#ReactSenior">返回</a>
+      </div>
+      {/* 返回按钮 */}
+
       <mark>
         插槽：父组件引入子组件的地方采用双标签，在里面写一些结构，在对应子组件里直接用props.children接收即可渲染到页面，这叫隐式渲染也就是react的插槽
         <main style={{ color: "red" }}>举例说明：</main>

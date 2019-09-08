@@ -6,6 +6,10 @@ import life from "./life.json";
 export default props => {
   return (
     <div style={{ width: "100%" }}>
+      <div style={{ marginBottom: "20px" }}>
+        <a href="http://localhost:3000/#ReactSenior">返回</a>
+      </div>
+      {/* 返回按钮 */}
       <li>
         {/* 做了一个生命周期的简述 */}
         某个事件（事务）成立时候触发的函数
