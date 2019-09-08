@@ -32,7 +32,7 @@ export default () => {
 													})}
 												</Card>
 											)
-										} else {
+										} else {//否则直接渲染
 											return (
 												<p key={index}>{item}</p>
 											)

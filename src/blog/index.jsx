@@ -44,15 +44,15 @@ export default class index extends Component {
     let Dom = "";
     // 声明一个dom作为接下来条件渲染的值
 switch (this.state.isCom) {
-      // 根据hash做条件渲染
-case "ReactBase":
-        Dom = <ReactBase />;
+  // 根据hash做条件渲染
+  case "ReactBase":
+  Dom= <ReactBase />; 
         break;
       case "ComponentType":
-Dom = <ComponentType />;
-        break;
+        Dom =  <ComponentType />;
+         break;
 case "ReactSenior":
-Dom = <ReactSenior a={this.getSonData} />;
+        Dom = <ReactSenior a={this.getSonData} />;
         break;
       case "third-plugins":
         Dom = <Third />;
@@ -75,6 +75,7 @@ Dom = <ReactSenior a={this.getSonData} />;
       case "ReactSenior/chacao":
         Dom = <Chacao />;
         break;
+        default:
     }
     return <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>;
   }
