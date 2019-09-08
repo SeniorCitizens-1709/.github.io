@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Mylayout from "./components/layout";
 // 引入React基础概述
-import ReactBase from "./components/ReactBase";
 import "antd/dist/antd.css";
 // react组件分类
+import ReactBase from "./components/ReactBase";
 import ComponentType from "./components/componentType";
 import ReactSenior from "./components/ReactSenior/allGaoji";
 import Third from "./components/ThirdPlugins";
@@ -53,7 +53,11 @@ export default class index extends Component {
         Dom = <ComponentType />;
         break;
       case "ReactSenior":
+<<<<<<< HEAD
         Dom = <ReactSenior a={this.getSonData} />;
+=======
+        Dom = <ReactSenior ishash={1} />;
+>>>>>>> decc17c5c4dfa8e304f63b10f9074d05eeb13c04
         break;
       case "third-plugins":
         Dom = <Third />;
