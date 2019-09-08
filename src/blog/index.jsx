@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import Mylayout from "./components/layout";
+import React, { Component } from 'react';
+import Mylayout from './components/layout';
 // 引入React基础概述
-import "antd/dist/antd.css";
+import 'antd/dist/antd.css';
 // react组件分类
-import ReactBase from "./components/ReactBase";
-import ComponentType from "./components/componentType";
-import ReactSenior from "./components/ReactSenior/allGaoji";
-import Third from "./components/ThirdPlugins";
+import ReactBase from './components/ReactBase';
+import ComponentType from './components/componentType';
+import ReactSenior from './components/ReactSenior/allGaoji';
+import Third from './components/ThirdPlugins';
 
 // ······························································
 // 这里是思博页面的子路由组件
-import TopApi from "./components/ReactSenior/allGaoji/top-Api";
-import Jsx from "./components/ReactSenior/allGaoji/Jsx";
-import Gaojie from "./components/ReactSenior/allGaoji/Gaojie";
-import Life from "./components/ReactSenior/allGaoji/Life";
-import State from "./components/ReactSenior/allGaoji/State";
-import Chacao from "./components/ReactSenior/allGaoji/Chacao";
+import TopApi from './components/ReactSenior/allGaoji/top-Api';
+import Jsx from './components/ReactSenior/allGaoji/Jsx';
+import Gaojie from './components/ReactSenior/allGaoji/Gaojie';
+import Life from './components/ReactSenior/allGaoji/Life';
+import State from './components/ReactSenior/allGaoji/State';
+import Chacao from './components/ReactSenior/allGaoji/Chacao';
 // ···································································
 
 export default class index extends Component {
@@ -23,7 +23,7 @@ export default class index extends Component {
     super();
     this.state = {
       // 将获取到的hash值赋值给isCom
-      isCom: window.location.hash.slice(1) || "ReactBase"
+      isCom: window.location.hash.slice(1) || 'ReactBase'
     };
 
     window.onhashchange = () => {
@@ -36,49 +36,46 @@ export default class index extends Component {
   // 收听子组件传递数据
   getSonData = id => {
     window.location.hash = id;
-      // 设置hash值
-    };
-    // 渲染函数
-    // 带/的是思博配的子路由
-    render() {
-      let Dom = "";
-      // 声明一个dom作为接下来条件渲染的值
-switch (this.state.isCom) {
-    // 根据hash做条件渲染
-  case "ReactBase":
-  Dom= <ReactBase />;
+    // 设置hash值
+  };
+  // 渲染函数
+  // 带/的是思博配的子路由
+  render() {
+    let Dom = '';
+    // 声明一个dom作为接下来条件渲染的值
+    switch (this.state.isCom) {
+      // 根据hash做条件渲染
+      case 'ReactBase':
+        Dom = <ReactBase />;
         break;
-      case "ComponentType":
-        Dom =  <ComponentType />;
- break;
-case "ReactSenior":
+      case 'ComponentType':
+        Dom = <ComponentType />;
+        break;
+      case 'ReactSenior':
         Dom = <ReactSenior a={this.getSonData} />;
         break;
-      case "ReactSenior":
-        Dom = <ReactSenior a={this.getSonData} />;
-        break;
-      case "third-plugins":
+      case 'third-plugins':
         Dom = <Third />;
         break;
-      case "ReactSenior/Top-Api":
+      case 'ReactSenior/Top-Api':
         Dom = <TopApi />;
         break;
-      case "ReactSenior/Top-Jsx":
+      case 'ReactSenior/Top-Jsx':
         Dom = <Jsx />;
         break;
-      case "ReactSenior/High-order-component":
+      case 'ReactSenior/High-order-component':
         Dom = <Gaojie />;
         break;
-      case "ReactSenior/life":
+      case 'ReactSenior/life':
         Dom = <Life />;
         break;
-      case "ReactSenior/state":
+      case 'ReactSenior/state':
         Dom = <State />;
         break;
-      case "ReactSenior/chacao":
+      case 'ReactSenior/chacao':
         Dom = <Chacao />;
         break;
-        default:
+      default:
     }
     return <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>;
   }
