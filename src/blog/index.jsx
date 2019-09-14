@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
-import Mylayout from './components/layout';
+import React, { Component } from "react";
+import Mylayout from "./components/layout";
 // 引入React基础概述
-import 'antd/dist/antd.css';
+import "antd/dist/antd.css";
 // react组件分类
-import ReactBase from './components/ReactBase';
-import ComponentType from './components/componentType';
-import ReactSenior from './components/ReactSenior/allGaoji';
-import Third from './components/ThirdPlugins';
+import ReactBase from "./components/ReactBase";
+import ComponentType from "./components/componentType";
+import ReactSenior from "./components/ReactSenior/allGaoji";
+import Third from "./components/ThirdPlugins";
 
 // ······························································
 // 这里是思博页面的子路由组件
-import TopApi from './components/ReactSenior/allGaoji/top-Api';
-import Jsx from './components/ReactSenior/allGaoji/Jsx';
-import Gaojie from './components/ReactSenior/allGaoji/Gaojie';
-import Life from './components/ReactSenior/allGaoji/Life';
-import State from './components/ReactSenior/allGaoji/State';
-import Chacao from './components/ReactSenior/allGaoji/Chacao';
-import Events from './components/ReactSenior/allGaoji/events';
-import Condition from './components/ReactSenior/allGaoji/condition';
-import Key from './components/ReactSenior/allGaoji/key';
-import Form from './components/ReactSenior/allGaoji/form';
-
+import TopApi from "./components/ReactSenior/allGaoji/top-Api";
+import Jsx from "./components/ReactSenior/allGaoji/Jsx";
+import Gaojie from "./components/ReactSenior/allGaoji/Gaojie";
+import Life from "./components/ReactSenior/allGaoji/Life";
+import State from "./components/ReactSenior/allGaoji/State";
+import Chacao from "./components/ReactSenior/allGaoji/Chacao";
+import Events from "./components/ReactSenior/allGaoji/events";
+import Condition from "./components/ReactSenior/allGaoji/condition";
+import Key from "./components/ReactSenior/allGaoji/key";
+import Form from "./components/ReactSenior/allGaoji/form";
 
 // ···································································
 // 思博登/注册录页
@@ -32,11 +31,7 @@ export default class index extends Component {
     super();
     this.state = {
       // 将获取到的hash值赋值给isCom
-<<<<<<< HEAD
       isCom: window.location.hash.slice(1) || "Register"
-=======
-      isCom: window.location.hash.slice(1) || 'ReactBase'
->>>>>>> 25fe9c2536f41ee455450965973fdd7fe43a2fa1
     };
 
     window.onhashchange = () => {
@@ -55,10 +50,9 @@ export default class index extends Component {
   // 带/的是思博配的子路由
 
   render() {
-    let Dom = '';
+    let Dom = "";
     // 声明一个dom作为接下来条件渲染的值
     switch (this.state.isCom) {
-<<<<<<< HEAD
       case "Register":
         Dom = <Register getSonData={this.getSonData} />;
         break;
@@ -71,53 +65,47 @@ export default class index extends Component {
       case "ComponentType":
         Dom = <ComponentType />;
         break;
-      case "ReactSenior":
-        Dom = <ReactSenior a={this.getSonData} />;
-      case "ReactSenior":
-        Dom = <ReactSenior a={this.getSonData} />;
-=======
       // 根据hash做条件渲染
-      case 'ReactBase':
+      case "ReactBase":
         Dom = <ReactBase />;
         break;
-      case 'ComponentType':
+      case "ComponentType":
         Dom = <ComponentType />;
         break;
-      case 'ReactSenior':
+      case "ReactSenior":
         Dom = <ReactSenior a={this.getSonData} />;
->>>>>>> 25fe9c2536f41ee455450965973fdd7fe43a2fa1
         break;
-      case 'third-plugins':
+      case "third-plugins":
         Dom = <Third />;
         break;
-      case 'ReactSenior/Top-Api':
+      case "ReactSenior/Top-Api":
         Dom = <TopApi />;
         break;
-      case 'ReactSenior/Top-Jsx':
+      case "ReactSenior/Top-Jsx":
         Dom = <Jsx />;
         break;
-      case 'ReactSenior/High-order-component':
+      case "ReactSenior/High-order-component":
         Dom = <Gaojie />;
         break;
-      case 'ReactSenior/life':
+      case "ReactSenior/life":
         Dom = <Life />;
         break;
-      case 'ReactSenior/state':
+      case "ReactSenior/state":
         Dom = <State />;
         break;
-      case 'ReactSenior/chacao':
+      case "ReactSenior/chacao":
         Dom = <Chacao />;
         break;
-        case 'ReactSenior/events':
+      case "ReactSenior/events":
         Dom = <Events />;
         break;
-        case 'ReactSenior/condition':
+      case "ReactSenior/condition":
         Dom = <Condition />;
         break;
-        case 'ReactSenior/key':
+      case "ReactSenior/key":
         Dom = <Key />;
         break;
-        case 'ReactSenior/form':
+      case "ReactSenior/form":
         Dom = <Form />;
         break;
       default:
