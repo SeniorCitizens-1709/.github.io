@@ -16,6 +16,12 @@ import Gaojie from './components/ReactSenior/allGaoji/Gaojie';
 import Life from './components/ReactSenior/allGaoji/Life';
 import State from './components/ReactSenior/allGaoji/State';
 import Chacao from './components/ReactSenior/allGaoji/Chacao';
+import Events from './components/ReactSenior/allGaoji/events';
+import Condition from './components/ReactSenior/allGaoji/condition';
+import Key from './components/ReactSenior/allGaoji/key';
+import Form from './components/ReactSenior/allGaoji/form';
+
+
 // ···································································
 
 export default class index extends Component {
@@ -74,6 +80,18 @@ export default class index extends Component {
         break;
       case 'ReactSenior/chacao':
         Dom = <Chacao />;
+        break;
+        case 'ReactSenior/events':
+        Dom = <Events />;
+        break;
+        case 'ReactSenior/condition':
+        Dom = <Condition />;
+        break;
+        case 'ReactSenior/key':
+        Dom = <Key />;
+        break;
+        case 'ReactSenior/form':
+        Dom = <Form />;
         break;
       default:
     }

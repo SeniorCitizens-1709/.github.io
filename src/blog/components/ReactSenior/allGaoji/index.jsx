@@ -38,6 +38,26 @@ const Gaoji = [
     title: "插槽",
     cont: "对插槽的详解",
     route: "ReactSenior/chacao"
+  },
+  {
+    title: "事件",
+    cont: "对事、防抖与节流的详解",
+    route: "ReactSenior/events"
+  },
+  {
+    title: "条件渲染 ",
+    cont: "对事件、边界错误、添加默认属性的详解",
+    route: "ReactSenior/condition"
+  },
+  {
+    title: "key",
+    cont: "对key的详解",
+    route: "ReactSenior/key"
+  },
+  {
+    title: "表单",
+    cont: "对表单、受控组件和非受控组件的详解",
+    route: "ReactSenior/form"
   }
 ];
 // 设置每一项的子路由

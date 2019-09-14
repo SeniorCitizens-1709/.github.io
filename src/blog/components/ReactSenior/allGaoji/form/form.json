@@ -1,0 +1,85 @@
+[
+  {
+    "title": "表单里的元素",
+    "cont": [
+      {
+        "p1": "input，textarea，select>option，button，label"
+      }
+    ]
+  },
+  {
+    "title": "合理的使用表单元素",
+    "cont": [
+      {
+        "p1": "使用label去包裹input及其他表单的元素"
+      }
+    ]
+  },
+  {
+    "title": "button按钮",
+    "cont": [
+      {
+        "p1": "在form表单里的button按钮类型必须制定，否则会触发表单的默认事件"
+      }
+    ]
+  },
+  {
+    "title": "value注意事项",
+    "cont": [
+      {
+        "p1": "表单里的input如果value绑定了state, 那么必须要有onChange事件，因为在react里数据是单向绑定的，不能像vue-一样双向绑定。"
+      }
+    ]
+  },
+  {
+    "title": "具体使用",
+    "cont": [
+      {
+        "p1": "1. 使用input的时候需要添加name属性，该属性是react内置的，添加其他的自定义属性无 效，name的值一定是和该input绑定的value变量名一致"
+      },
+      {
+        "p1": "1. 修改值的时候，使用元素的name属性去做键名，用es6语法直接传递给setState去修改"
+      },
+      {
+        "p1": "1.1 es6中的写法:his.setState({ [event.target.name]:event.target.value });"
+      }
+    ]
+  },
+  {
+    "title": "受控组件",
+    "cont": [
+      {
+        "p1": "定义：如果一个表单元素受React控制的,称之为受控组件"
+      },
+      {
+        "p1": "在hml中，表单元素(如<input>，<textarea>和<select>)在React中，可变状态(mutable state)通常保存在组件的state属性中，并且只能通过使用setState()来更新。即渲染表单 的React组件还控制着用户输入过程中表单发生的操作。被React以这种方式控制取值的表单输入元素就叫做受控组件"
+      },
+      {
+        "p1": ""
+      },
+      {
+        "p1": ""
+      }
+    ]
+  },
+  {
+    "title": "非受控组件",
+    "cont": [
+      {
+        "p1": "定义：如果一个表单元素不受React控制的,是由用户自由操作的,称之为非受控组件"
+      },
+      {
+        "p1": "举例："
+      },
+      {
+        "p1": "1. 使用ref绑定的input元素"
+      },
+      {
+        "p1": "2. <input type='file' /> 因为它的value是只读的无法绑定react的state，所以他是非受控组件"
+      },
+      {
+        "p1": "3. button按钮的值一般也是写死的，name它也是非受控组件"
+      }
+    ]
+  }
+]
