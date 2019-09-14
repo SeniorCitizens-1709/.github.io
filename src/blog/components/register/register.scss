@@ -1,0 +1,25 @@
+.register-box-bs-004 {
+  width: 450px;
+  top: 20%;
+  left: 35%;
+  position: absolute;
+  padding-top: 40px;
+  background-color: #fff;
+  border: 1px solid red;
+  border-radius: 15px;
+  .ant-form {
+    width: 300px;
+    margin: 0 auto;
+    .ant-form-item label {
+      display: inline-block;
+    }
+    .register-btnbox-bs-004 {
+      display: flex;
+      .ant-btn-primary {
+        display: block;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+    }
+  }
+}

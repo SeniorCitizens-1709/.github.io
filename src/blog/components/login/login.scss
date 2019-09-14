@@ -1,0 +1,29 @@
+.loginbox-bs-004 {
+  width: 450px;
+  height: 400px;
+  top: 20%;
+  left: 35%;
+  position: absolute;
+  padding-top: 50px;
+  background-color: #fff;
+  border: 1px solid green;
+  border-radius: 15px;
+  .ant-form {
+    width: 300px;
+    margin: 0 auto;
+    .ant-form-item label {
+      display: inline-block;
+    }
+    .login-btnbox-bs-004 {
+      display: flex;
+      margin-top: 10px;
+      & button {
+        display: block;
+        margin-top: 10px;
+      }
+      & button:nth-child(2) {
+        margin-left: 20px;
+      }
+    }
+  }
+}

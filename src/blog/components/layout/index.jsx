@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Menu, Icon } from "antd";
-
+import "antd/dist/antd.css";
+import { message } from "antd";
 const { Header, Sider, Content } = Layout;
 
 // 左侧一级导航的数据
@@ -37,7 +38,8 @@ export default class Mylayout extends React.Component {
     this.state = {
       // 控制开展收起
       collapsed: false,
-      isCom: window.location.hash.slice(1)
+      isCom: window.location.hash.slice(1),
+      user: JSON.parse(sessionStorage.getItem("user")).user
     };
   }
   // 切换的方法
@@ -46,6 +48,12 @@ export default class Mylayout extends React.Component {
       collapsed: !this.state.collapsed
     });
   };
+  componentDidMount() {
+    if (!this.state.user) {
+      message.error("您还未登录，请前往登录");
+      this.props.getsondata("Login");
+    }
+  }
   render() {
     // Layout：容器组件，包裹组件
     // Sider：侧边栏，放导航的
@@ -54,28 +62,36 @@ export default class Mylayout extends React.Component {
     // Content：内容展示组件
 
     // 获取当前页面在leftNav数据中的下标
-    let index = leftNav.indexOf(leftNav.find(item => item.id === this.state.isCom));
+    let index = leftNav.indexOf(
+      leftNav.find(item => item.id === this.state.isCom)
+    );
 
     return (
       <Layout className="leftNav overallsituation-l-0">
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={[index + '' || '0']}>
-            {
-              leftNav.map((item, index) => {
-                return (
-                  <Menu.Item
-                    key={index}
-                    onClick={() => {
-                      this.props.getsondata(item.id);
-                    }}
-                  >
-                    <Icon type={item.iconType} />
-                    <span>{item.text}</span>
-                  </Menu.Item>
-                );
-              })
-            }
+          <div style={{ height: "50px", color: "#fff", lineHeight: "50px" }}>
+            欢迎您：<span style={{ color: "red" }}>{this.state.user}</span>
+          </div>
+
+          <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={[index + "" || "0"]}
+          >
+            {leftNav.map((item, index) => {
+              return (
+                <Menu.Item
+                  key={index}
+                  onClick={() => {
+                    this.props.getsondata(item.id);
+                  }}
+                >
+                  <Icon type={item.iconType} />
+                  <span>{item.text}</span>
+                </Menu.Item>
+              );
+            })}
           </Menu>
         </Sider>
         <Layout>

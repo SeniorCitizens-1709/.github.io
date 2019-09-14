@@ -17,13 +17,16 @@ import Life from "./components/ReactSenior/allGaoji/Life";
 import State from "./components/ReactSenior/allGaoji/State";
 import Chacao from "./components/ReactSenior/allGaoji/Chacao";
 // ···································································
-
+// 思博登/注册录页
+import Login from "./components/login/login";
+import Register from "./components/register/register";
+// ···································································
 export default class index extends Component {
   constructor() {
     super();
     this.state = {
       // 将获取到的hash值赋值给isCom
-      isCom: window.location.hash.slice(1) || "ReactBase"
+      isCom: window.location.hash.slice(1) || "Register"
     };
 
     window.onhashchange = () => {
@@ -36,32 +39,31 @@ export default class index extends Component {
   // 收听子组件传递数据
   getSonData = id => {
     window.location.hash = id;
-<<<<<<< HEAD
     // 设置hash值
-=======
-    // 设置hash值 
->>>>>>> 79b3ddb843d46ad575d8b91d2d7bd7a37866d59a
   };
   // 渲染函数
   // 带/的是思博配的子路由
+
   render() {
     let Dom = "";
     // 声明一个dom作为接下来条件渲染的值
-switch (this.state.isCom) {
-      // 根据hash做条件渲染
-case "ReactBase":
+    switch (this.state.isCom) {
+      case "Register":
+        Dom = <Register getSonData={this.getSonData} />;
+        break;
+      case "Login":
+        Dom = <Login getSonData={this.getSonData} />;
+        break;
+      case "ReactBase":
         Dom = <ReactBase />;
         break;
       case "ComponentType":
-Dom = <ComponentType />;
+        Dom = <ComponentType />;
         break;
-<<<<<<< HEAD
       case "ReactSenior":
         Dom = <ReactSenior a={this.getSonData} />;
-=======
-case "ReactSenior":
-Dom = <ReactSenior a={this.getSonData} />;
->>>>>>> 79b3ddb843d46ad575d8b91d2d7bd7a37866d59a
+      case "ReactSenior":
+        Dom = <ReactSenior a={this.getSonData} />;
         break;
       case "third-plugins":
         Dom = <Third />;
@@ -85,6 +87,16 @@ Dom = <ReactSenior a={this.getSonData} />;
         Dom = <Chacao />;
         break;
     }
-    return <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>;
+    return (
+      <>
+        {this.state.isCom === "Register" ? (
+          <Register getSonData={this.getSonData} />
+        ) : this.state.isCom === "Login" ? (
+          <Login getSonData={this.getSonData} />
+        ) : (
+          <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>
+        )}
+      </>
+    );
   }
 }
