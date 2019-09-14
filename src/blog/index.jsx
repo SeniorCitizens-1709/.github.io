@@ -23,13 +23,20 @@ import Form from './components/ReactSenior/allGaoji/form';
 
 
 // ···································································
-
+// 思博登/注册录页
+import Login from "./components/login/login";
+import Register from "./components/register/register";
+// ···································································
 export default class index extends Component {
   constructor() {
     super();
     this.state = {
       // 将获取到的hash值赋值给isCom
+<<<<<<< HEAD
+      isCom: window.location.hash.slice(1) || "Register"
+=======
       isCom: window.location.hash.slice(1) || 'ReactBase'
+>>>>>>> 25fe9c2536f41ee455450965973fdd7fe43a2fa1
     };
 
     window.onhashchange = () => {
@@ -46,10 +53,29 @@ export default class index extends Component {
   };
   // 渲染函数
   // 带/的是思博配的子路由
+
   render() {
     let Dom = '';
     // 声明一个dom作为接下来条件渲染的值
     switch (this.state.isCom) {
+<<<<<<< HEAD
+      case "Register":
+        Dom = <Register getSonData={this.getSonData} />;
+        break;
+      case "Login":
+        Dom = <Login getSonData={this.getSonData} />;
+        break;
+      case "ReactBase":
+        Dom = <ReactBase />;
+        break;
+      case "ComponentType":
+        Dom = <ComponentType />;
+        break;
+      case "ReactSenior":
+        Dom = <ReactSenior a={this.getSonData} />;
+      case "ReactSenior":
+        Dom = <ReactSenior a={this.getSonData} />;
+=======
       // 根据hash做条件渲染
       case 'ReactBase':
         Dom = <ReactBase />;
@@ -59,6 +85,7 @@ export default class index extends Component {
         break;
       case 'ReactSenior':
         Dom = <ReactSenior a={this.getSonData} />;
+>>>>>>> 25fe9c2536f41ee455450965973fdd7fe43a2fa1
         break;
       case 'third-plugins':
         Dom = <Third />;
@@ -95,6 +122,16 @@ export default class index extends Component {
         break;
       default:
     }
-    return <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>;
+    return (
+      <>
+        {this.state.isCom === "Register" ? (
+          <Register getSonData={this.getSonData} />
+        ) : this.state.isCom === "Login" ? (
+          <Login getSonData={this.getSonData} />
+        ) : (
+          <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>
+        )}
+      </>
+    );
   }
 }
