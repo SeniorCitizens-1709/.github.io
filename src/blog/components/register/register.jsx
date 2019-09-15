@@ -166,7 +166,7 @@ class Login extends Component {
               // checked的值为从state里拿到的动态进行改变的true和false
               onChange={this.registerChange}
             >
-              我已阅读并同意该 <a href onClick={this.showModal}>协议</a>
+              我已阅读并同意该 <a href="###" onClick={this.showModal}>协议</a>
               {/* 点击事件，弹出antd的Model弹窗 */}
             </Checkbox>
             <div className="register-btnbox-bs-004">

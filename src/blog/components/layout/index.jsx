@@ -32,7 +32,7 @@ const leftNav = [
   },
   {
     iconType: "upload",
-    text: "问卷调差",
+    text: "问卷调查",
     id: "Questionnaire",
     key: "4"
   }
