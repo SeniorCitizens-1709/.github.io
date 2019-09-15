@@ -7,6 +7,7 @@ import ReactBase from "./components/ReactBase";
 import ComponentType from "./components/componentType";
 import ReactSenior from "./components/ReactSenior/allGaoji";
 import Third from "./components/ThirdPlugins";
+import Questionnaire from "./components/Questionnaire";
 
 // ······························································
 // 这里是思博页面的子路由组件
@@ -65,13 +66,10 @@ export default class index extends Component {
       case "ComponentType":
         Dom = <ComponentType />;
         break;
+      case "Questionnaire":
+        Dom = <Questionnaire />;
+        break;
       // 根据hash做条件渲染
-      case "ReactBase":
-        Dom = <ReactBase />;
-        break;
-      case "ComponentType":
-        Dom = <ComponentType />;
-        break;
       case "ReactSenior":
         Dom = <ReactSenior a={this.getSonData} />;
         break;
@@ -117,8 +115,8 @@ export default class index extends Component {
         ) : this.state.isCom === "Login" ? (
           <Login getSonData={this.getSonData} />
         ) : (
-          <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>
-        )}
+              <Mylayout getsondata={this.getSonData}>{Dom}</Mylayout>
+            )}
       </>
     );
   }

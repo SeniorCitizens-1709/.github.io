@@ -42,7 +42,7 @@ class Login extends Component {
     // es6 的写法，采用三元表达式，将你当前的name项对应的值改为你当前输入的value的值，
     // 并且判断如果是checkbox的话就进行专门的true和false的赋值，否则就向当前的input框赋value值
     this.setState({
-      [target.name]: target.name == "check" ? target.checked : target.value
+      [target.name]: target.name === "check" ? target.checked : target.value
     });
   };
   // 验证方法
@@ -50,10 +50,10 @@ class Login extends Component {
     const { user, pwd, repwd, email, check } = this.state;
     // 将所有值从state里取出
     if (
-      user.trim() == "" ||
-      pwd.trim() == "" ||
-      repwd.trim() == "" ||
-      email.trim() == ""
+      user.trim() === "" ||
+      pwd.trim() === "" ||
+      repwd.trim() === "" ||
+      email.trim() === ""
       // 判断除了CheckBox以外所有的值都不能是空
     ) {
       message.error("不能有空项");
@@ -166,7 +166,7 @@ class Login extends Component {
               // checked的值为从state里拿到的动态进行改变的true和false
               onChange={this.registerChange}
             >
-              我已阅读并同意该 <a onClick={this.showModal}>协议</a>
+              我已阅读并同意该 <a href onClick={this.showModal}>协议</a>
               {/* 点击事件，弹出antd的Model弹窗 */}
             </Checkbox>
             <div className="register-btnbox-bs-004">
@@ -175,7 +175,7 @@ class Login extends Component {
                 htmlType="submit"
                 className="login-form-button"
                 onClick={this.onRegister}
-                // 触发注册函数
+              // 触发注册函数
               >
                 立即注册
               </Button>

@@ -29,6 +29,12 @@ const leftNav = [
     text: "React插件",
     id: "third-plugins",
     key: "3"
+  },
+  {
+    iconType: "upload",
+    text: "问卷调差",
+    id: "Questionnaire",
+    key: "4"
   }
 ];
 
