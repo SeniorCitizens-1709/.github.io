@@ -1,0 +1,42 @@
+.section-002 {
+    border: 1px solid #F5F5F5;
+    padding: 10px 5px;
+}
+
+label {
+    display: block;
+    margin-left: 30px;
+
+    input {
+        margin-right: 10px;
+    }
+}
+
+.btns {
+    margin-top: 10px;
+
+    button {
+        margin-right: 50px;
+    }
+}
+
+.ant-modal {
+    top: 10px;
+}
+
+.ant-card {
+    margin-bottom: 5px;
+
+    .ant-card-head {
+        font-size: auto;
+    }
+
+    .ant-card-body {
+        text-indent: 20px;
+        padding: 10px 24px;
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+}
