@@ -38,6 +38,18 @@
                 "label": "火龙果",
                 "value": "hlg",
                 "chec": false
+            },
+            {
+                "id": 3,
+                "label": "梨",
+                "value": "hlg",
+                "chec": false
+            },
+            {
+                "id": 4,
+                "label": "葡萄",
+                "value": "hlg",
+                "chec": false
             }
         ]
     }

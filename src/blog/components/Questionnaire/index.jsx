@@ -2,30 +2,101 @@ import React, { Component } from 'react';
 import './index.scss'
 import data from './data.json'
 import Child from './components/child'
-// 引入对话框、按钮、卡片、全局提示
+// 引入对话框、按钮、卡片、全局提示、分割线
 import { Modal, Button, Card, message } from 'antd';
 class Index extends Component {
     constructor() {
         super();
         this.state = {
             radioLike: "like",//单选框
-            checkbox: [false, false, false],//复选框
+            checkbox: [false, false, false, false, false],//复选框
             textarea: '',//文本域
             visible: false,//对话框
-            checkboxTrue: []//喜欢的水果具体名称
+            checkboxTrue: [],//喜欢的水果具体名称
+            checAll: false,//全选
+            checRever: false//反选
         }
         this.copyState = this.state
     }
     handleChange = ({ target }) => {
-        if (target.name === "checkbox") {
+        if (target.name === "radioLike") {
+            this.setState({
+                [target.name]: target.value
+            }, () => {
+                this.setState({
+                    checkbox: [false, false, false, false, false],
+                    checAll: false,
+                    checRever: false,
+                    textarea: ''
+                })
+            })
+        } else if (target.name === "checkbox") {
             const newCheckbox = [...this.state.checkbox]
             newCheckbox[target.value] = target.checked;
             this.setState({
                 [target.name]: newCheckbox
+            }, () => {
+                this.monitorCheckbox()
+                this.setState({
+                    checRever: false
+                })
             })
+        } else if (target.name === "checAll") {
+            this.setState({
+                [target.name]: target.checked
+            }, this.checAll())
+        } else if (target.name === "checRever") {
+            this.setState({
+                [target.name]: target.checked
+            }, this.checRever())
         } else {
             this.setState({
                 [target.name]: target.value
+            })
+        }
+    }
+    //全选
+    checAll = () => {
+        if (!this.state.checAll) {
+            this.setState({
+                checkbox: [true, true, true, true, true]
+            })
+        } else {
+            this.setState({
+                checkbox: [false, false, false, false, false]
+            })
+        }
+    }
+    // 反选
+    checRever = () => {
+        let newChecRever = [];
+        // 循环遍历checkbox数组，对每一项进行取反，再放到一个新数组里
+        for (let i = 0; i < this.state.checkbox.length; i++) {
+            newChecRever.push(!this.state.checkbox[i])
+        }
+        this.setState({
+            checkbox: newChecRever
+        }, () => {
+            this.monitorCheckbox()
+        })
+    }
+    // 监听checkbox数组
+    monitorCheckbox = () => {
+
+        let isChecAll = true;
+        // 循环遍历checkbox数组，对每一项进行匹配，如果有一项为false的，就将isChecAll设置为false
+        for (let i = 0; i < this.state.checkbox.length; i++) {
+            if (!this.state.checkbox[i]) {
+                isChecAll = false
+            }
+        }
+        if (isChecAll) {
+            this.setState({
+                checAll: true
+            })
+        } else {
+            this.setState({
+                checAll: false
             })
         }
     }
@@ -48,14 +119,13 @@ class Index extends Component {
     }
 
     render() {
-        const { radioLike, checkbox, textarea, checkboxTrue } = this.state
+        const { radioLike, checkbox, textarea, checkboxTrue, checAll, checRever } = this.state
         const isLike = radioLike === "like" ? true : false;
         // 禁用状态
         const disabled = isLike ? false : true;
         // 文本域部分的问题
-        const textitle = isLike ? "吃水果对身体的好处" : "你不喜欢吃水果的原因"
+        const textitle = isLike ? "吃水果的好处" : "不喜欢吃水果的原因"
         let isChecked;
-
         return (
             <>
                 <form  >
@@ -73,6 +143,33 @@ class Index extends Component {
                         }
                         return <div key={item.id} className="section-002">
                             <h3>{item.id}、{item.problem}【{item.type === "radio" ? '单选' : "多选"}】</h3>
+                            {
+                                // 全选和反选部分
+                                item.type === "checkbox" ?
+                                    <div className="section-002-active">
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                name="checAll"
+                                                value={checAll}
+                                                checked={checAll}
+                                                onChange={this.handleChange}
+                                                disabled={disabled}
+                                            />全选
+                                                </label>
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                name="checRever"
+                                                value={checRever}
+                                                checked={checRever}
+                                                onChange={this.handleChange}
+                                                disabled={disabled} />反选
+                                                </label>
+                                    </div>
+                                    :
+                                    ""
+                            }
                             {/* 调用子组件 */}
                             <Child data={item} checked={isChecked} handlechange={this.handleChange} disabled={disabled} />
                         </div>

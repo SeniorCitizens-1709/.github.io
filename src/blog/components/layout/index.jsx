@@ -31,7 +31,7 @@ const leftNav = [
     key: "3"
   },
   {
-    iconType: "upload",
+    iconType: "container",
     text: "问卷调查",
     id: "Questionnaire",
     key: "4"
