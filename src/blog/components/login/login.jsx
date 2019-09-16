@@ -47,10 +47,10 @@ class Login extends Component {
   };
   componentDidMount() {
     if (!sessionStorage.getItem("user")) {
-      message.error("您并没有注册记录，请返回注册");
+      message.error("您并没有注册记录，请返回注册,(5秒后自动返回)");
       setTimeout(() => {
         this.props.getSonData("Register");
-      }, 1500);
+      }, 5000);
 
       return false;
     }

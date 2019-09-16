@@ -45,7 +45,9 @@ export default class Mylayout extends React.Component {
       // 控制开展收起
       collapsed: false,
       isCom: window.location.hash.slice(1),
-      user: JSON.parse(sessionStorage.getItem("user")).user || ""
+      user: JSON.parse(sessionStorage.getItem("user"))
+        ? JSON.parse(sessionStorage.getItem("user")).user
+        : ""
     };
   }
   // 切换的方法
