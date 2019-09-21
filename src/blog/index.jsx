@@ -21,7 +21,10 @@ import Events from "./components/ReactSenior/allGaoji/events";
 import Condition from "./components/ReactSenior/allGaoji/condition";
 import Key from "./components/ReactSenior/allGaoji/key";
 import Form from "./components/ReactSenior/allGaoji/form";
-
+import Stateimprovement from './components/ReactSenior/allGaoji/stateimprovement';
+import LazyCom from "./components/ReactSenior/allGaoji/lazyCombination";
+import Context from "./components/ReactSenior/allGaoji/context";
+import Refs from "./components/ReactSenior/allGaoji/refs";
 // ···································································
 // 思博登/注册录页
 import Login from "./components/login/login";
@@ -105,6 +108,18 @@ export default class index extends Component {
         break;
       case "ReactSenior/form":
         Dom = <Form />;
+        break;
+        case "ReactSenior/stateimprovement":
+        Dom = <Stateimprovement />;
+        break;
+        case "ReactSenior/lazyCombination":
+        Dom = <LazyCom />;
+        break;
+        case "ReactSenior/context":
+        Dom = <Context />;
+        break;
+        case "ReactSenior/refs":
+        Dom = <Refs />;
         break;
       default:
     }

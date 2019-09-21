@@ -1,0 +1,86 @@
+[
+  {
+    "title": "定义：",
+    "cont": [
+      {
+        "p1": "context 提供了一个无需为每层添加props，就能在组件树之间进行数据传递的方法"
+      }
+    ]
+  },
+  {
+    "title": "上下文的API:",
+    "cont": [
+      {
+        "p1": "1. React.createContext:创建上下文对象"
+      },
+      {
+        "p1": "2.  Context.Provider: 上下文数据提供者组件"
+      },
+      {
+        "p1": "3. Context.consumer ：上下文组件渲染组件"
+      },
+      {
+        "p1": "4. Class.contextType:订阅者"
+      }
+    ]
+  },
+  {
+    "title": "详细使用方法",
+    "cont": [
+      {
+        "p1": "创建上下文对象 ：cerateContext"
+      },
+      {
+        "p1": "在跟容器组件里引入创建上下文对象"
+      },
+      {
+        "p1": " 使用 Provider 组件来提供数据，在 Provider 组件上的 value 属性里存放数据"
+      },
+      {
+        "p1": " 在子组件里引入创建后的上下文对象"
+      },
+      {
+        "p1": "使用 Consumer 组件来获取最近的 Provider 上的数据"
+      },
+      {
+        "p1": " 在 Consumer 组件里必须用固定语法 一个函数来处理获取的数据"
+      }
+    ]
+  },
+  {
+    "title": "context 对象正在使用过程中需要注意那些地方？",
+    "cont": [
+      {
+        "p1": "所有的组件他们里必须使用同一个创建后的 Context对象"
+      }
+    ]
+  },
+  {
+    "title": "Consumer 组件工作原理：",
+    "cont": [
+      {
+        "p1": "一直向上找，直到找到 Provider 组件才停止"
+      }
+    ]
+  },
+  {
+    "title": "contextType :它是class 组件独有的静态属性",
+    "cont": [
+      {
+        "p1": "它用来获取上下文对象，一般是将上下文对象赋给它.使用this.context 对象来使用上下文仓库里的数据"
+      },
+      {
+        "p1": " 需要注意的是："
+      },
+      {
+        "p1": "如果该组件的父级中有Provider组件，那么 this.context 的值就是来自 Provider 托管的数据"
+      },
+      {
+        "p1": "如果该组件没有父级组件，或者父级既以 以上组件里都没有 Provider 组件的时候，this.context 的值就是创建上下文对象方法里的数据"
+      },
+      {
+        "p1": " 如果想使用 contextType 你要确保上层组件中都没有 Provider，或者这个属性就只在顶层/根组件里使用 "
+      }
+    ]
+  }
+]

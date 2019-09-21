@@ -58,6 +58,26 @@ const Gaoji = [
     title: "表单",
     cont: "对表单、受控组件和非受控组件的详解",
     route: "ReactSenior/form"
+  },
+  {
+    title: "状态提升与protals使用",
+    cont: "状态提升同步数据展示,protals详细使用",
+    route: "ReactSenior/stateimprovement"
+  },
+  {
+    title: "懒加载与组合模式",
+    cont: "对性能优化：懒加载详细描述",
+    route: "ReactSenior/lazyCombination"
+  },
+  {
+    title: "上下文数据传递",
+    cont: "对上下文详细描述使用",
+    route: "ReactSenior/context"
+  },
+  {
+    title: "Refs",
+    cont: "对Refs详细描述与使用",
+    route: "ReactSenior/refs"
   }
 ];
 // 设置每一项的子路由

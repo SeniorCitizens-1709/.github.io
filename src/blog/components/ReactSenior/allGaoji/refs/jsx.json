@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Refs是什么",
+    "cont": [
+      {
+        "p1": "是获取元素的一个API"
+      },
+      {
+        "p1": "可以附加到任何组件上的 ref 属性"
+      },
+      {
+        "p1": "能够让你直接访问DOM元素或组件实例"
+      }
+    ]
+  },
+  {
+    "title": "refs语法",
+    "cont": [
+      {
+        "p1": "1.直接在元素上使用：<input ref='myrefs'>"
+      },
+      {
+        "p1": "2.调用：this.ref.myrefs"
+      },
+      {
+        "p1": "3.在组件内置了refs对象，可以获取到我们直接定义ref值，那么这个值就是元素本身"
+      }
+    ]
+  },
+  {
+    "title": "refs使用：",
+    "cont": [
+      {
+        "p1": "1.创建一个ref对象：this.inputRef = React.createRef()"
+      },
+      {
+        "p1": "2.绑定到元素：<inout ref={this.inputRef}>"
+      },
+      {
+        "p1": "3.使用ref：this.inputRef.current"
+      }
+    ]
+  },
+  {
+    "title": "forwardRef使用：",
+    "cont": [
+      {
+        "p1": "定义： 它是React下面的顶级API，自身是个函数"
+      },
+      {
+        "p1": "语法： 该函数接收一个回调函数，回调函数里接收两个参数：props和ref"
+      }
+    ]
+  },
+  {
+    "title": "ref转发定义：",
+    "cont": [
+      {
+        "p1": " 将父组件中的ref对象传递给子组件，用来获取子组件中的dom元素"
+      },
+      {
+        "p1": "ref转发就是转发父组件中的ref对象到子组件里，用来获取子组件的dom元素"
+      }
+    ]
+  },
+  {
+    "title": "高阶组件里的转发",
+    "cont": [
+      {
+        "p1": "谨记一条原则：除了class自组件上，如果要传递ref， 需要使用自定义属性将ref通过props传递进去 (也就是不能直接ref={xxx},而是要把ref变为自定义属性)"
+      },
+      {
+        "p1": "除了class组件之外，其他自定义的组件上使用ref的话 那么该组件必须使用forwardRef创建的，forwardRef就是用来接收传递进来的ref对象的"
+      }
+    ]
+  }
+]
