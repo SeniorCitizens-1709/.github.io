@@ -6,7 +6,11 @@ export default props => {
   return (
     <div>
       <div style={{ marginBottom: "20px" }}>
-        <a href="https://seniorcitizens-1709.github.io/.github.io/build/#ReactSenior">
+        <a
+          onClick={() => {
+            window.history.back();
+          }}
+        >
           返回
         </a>
       </div>
