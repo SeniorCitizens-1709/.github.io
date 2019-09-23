@@ -3,11 +3,16 @@ import jsx from "./jsx.json";
 // 引入jsx的json文件
 import { Divider } from "antd";
 // 分割线
+
 export default props => {
   return (
     <div>
       <div style={{ marginBottom: "20px" }}>
-        <a href="https://seniorcitizens-1709.github.io/.github.io/build/#ReactSenior">
+        <a
+          onClick={() => {
+            window.history.back();
+          }}
+        >
           返回
         </a>
       </div>
